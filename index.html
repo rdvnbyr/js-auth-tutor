@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript-Auth-App</title>
+    <script
+      src="https://kit.fontawesome.com/92ae6f1716.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script async src="script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header--nav">
+        <div class="header--nav-brand">
+          <i class="fab fa-js"></i>
+          <h4>Auth-App</h4>
+        </div>
+        <div class="header--nav-links">
+          <button
+            id="login-link"
+            type="button"
+            class="btn btn-link header--nav-links-login"
+          >
+            Login
+          </button>
+          <button
+            id="signup-link"
+            type="button"
+            class="btn btn-link header--nav-links-signup"
+          >
+            SignUp
+          </button>
+          <button
+            id="logout-link"
+            type="button"
+            class="btn btn-link header--nav-links-signup"
+          >
+            Logout
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main style="min-height: 100vh">
+      <section id="login-section" class="section--login">
+        <form id="login-form">
+          <div class="section--form--header">
+            <i class="fas fa-user-tie"></i>
+            <h2 class="section--form-title">Login</h2>
+          </div>
+          <div class="section--login-form--main">
+            <div class="form-control">
+              <label class="form-control--label" for="">Email</label>
+              <input
+                id="login-email"
+                class="form-control--input"
+                type="email"
+                placeholder="Enter vaild email"
+              />
+            </div>
+            <div class="form-control">
+              <label class="form-control--label" for="">Password</label>
+              <input
+                id="login-password"
+                class="form-control--input"
+                type="password"
+                placeholder="Enter password"
+              />
+            </div>
+            <div class="section--form--button">
+              <button class="btn btn-success" type="submit">Submit</button>
+            </div>
+          </div>
+          <div class="section--form--footer">
+            <p>
+              You have not an account. Please
+              <span
+                onclick="toggleFormHandler('signup')"
+                style="
+                  color: blue;
+                  cursor: pointer;
+                  font-weight: bold;
+                  text-decoration: underline;
+                "
+                >signup</span
+              >
+            </p>
+          </div>
+        </form>
+      </section>
+      <section id="signup-section" class="section-signup">
+        <form id="signup-form">
+          <div class="section--form--header">
+            <i class="fas fa-user-tie"></i>
+            <h2 class="section--form-title">Sign Up</h2>
+          </div>
+          <div>
+            <div class="form-control">
+              <label class="form-control--label" for="">Username</label>
+              <input id="signup-username" class="form-control--input" type="text" />
+            </div>
+            <div class="form-control">
+              <label class="form-control--label" for="">Email</label>
+              <input id="signup-email" class="form-control--input" type="email" />
+            </div>
+            <div class="form-control">
+              <label class="form-control--label" for="">Password</label>
+              <input id="signup-password" class="form-control--input" type="password" />
+            </div>
+            <div class="form-control">
+              <label class="form-control--label" for="">Repeat Password</label>
+              <input
+                id="signup-repeat-password"
+                class="form-control--input"
+                type="password"
+              />
+            </div>
+            <div class="section--form--button">
+              <button class="btn btn-success" type="submit">Save</button>
+            </div>
+          </div>
+          <div class="section--form--footer">
+            <p>
+              You have already an account. Please
+              <span
+                onclick="toggleFormHandler('login')"
+                style="
+                  color: blue;
+                  cursor: pointer;
+                  font-weight: bold;
+                  text-decoration: underline;
+                "
+                >Login</span
+              >
+            </p>
+          </div>
+        </form>
+      </section>
+      <section id="main-section" class="main--section">
+        <h1>Welcome to my aplication!!</h1>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer--div">
+        <h4>@This project made for javascript learn.</h4>
+      </div>
+    </footer>
+  </body>
+</html>
